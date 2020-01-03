@@ -7,8 +7,8 @@ import com.sample.operation.service.OperationService;
 public class Demo {
 
     public static void main(String[] args) {
-        OperationService service1 = new OperationService();
-        OperationController operationController = new OperationController(service1);
+        OperationService operationService = new OperationService();
+        OperationController operationController = new OperationController(operationService);
         OperationHistory operationHistory = operationController.getOperationHistory("delete");
         System.out.println(operationHistory.getOperationType());
     }

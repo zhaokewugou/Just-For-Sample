@@ -9,21 +9,21 @@ public class OperationService {
     public OperationService() {
     }
 
-    public OperationHistory getOperationHistory(String type){
-        OperationHistory OperationHistory = new OperationHistory(001, 001);
+    public OperationHistory getOperationHistory(String type) {
+        OperationHistory operationHistory = new OperationHistory(001, 001);
         if ("add".equals(type)) {
-            OperationHistory.setOperationType(1);
-            OperationHistory.setOperationTime(new Date());
-        } else if("delete".equals(type)) {
-            OperationHistory.setOperationType(2);
-            OperationHistory.setOperationTime(new Date());
-        } else if("update".equals(type)) {
-            OperationHistory.setOperationType(3);
-            OperationHistory.setOperationTime(new Date());
-        }else{
-            OperationHistory.setOperationType(4);
-            OperationHistory.setOperationTime(new Date());
+            operationHistory.setOperationType(1);
+            operationHistory.setOperationTime(new Date());
+        } else if ("delete".equals(type)) {
+            operationHistory.setOperationType(2);
+            operationHistory.setOperationTime(new Date());
+        } else if ("update".equals(type)) {
+            operationHistory.setOperationType(3);
+            operationHistory.setOperationTime(new Date());
+        } else {
+            operationHistory.setOperationType(4);
+            operationHistory.setOperationTime(new Date());
         }
-        return OperationHistory;
+        return operationHistory;
     }
 }

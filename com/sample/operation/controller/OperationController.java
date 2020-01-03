@@ -11,7 +11,7 @@ public class OperationController {
         this.operationService = operationService;
     }
 
-    public OperationHistory getOperationHistory(String type){
+    public OperationHistory getOperationHistory(String type) {
         return operationService.getOperationHistory(type);
     }
 }
